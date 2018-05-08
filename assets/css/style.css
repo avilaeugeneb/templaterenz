@@ -1,0 +1,93 @@
+/* CSS Variables */
+:root {
+	--main-background-color: #dc3545;
+	--navbar-background-color: #343a40;
+}
+
+/*
+ *
+ * General Rules
+ *
+ */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-size: 0.9rem;
+}
+
+body {
+	background-color: var(--main-background-color);
+}
+
+/*
+ *
+ * Content
+ *
+ */
+
+.wrapper {
+	background-color: white;
+	width: 80%;
+	margin: 0 auto;
+}
+
+/*
+ *
+ * Footer
+ *
+ */
+
+#main-footer {
+	background-color: var(--navbar-background-color);
+	color: lightgrey;
+	padding: 25px 0;
+	text-align: center;
+}
+
+/*
+ *
+ * Catalog
+ *
+ */
+div.grid{
+	display: grid;
+}
+
+div.grid.catalog{
+	grid-template-columns: repeat(3, 1fr);
+ 	grid-gap: 10px;
+	grid-auto-rows: auto;
+	padding: 5vh;
+}
+
+div.grid.items{
+	grid-template-columns: repeat(2, 1fr);
+ 	grid-gap: 10px;
+	grid-auto-rows: auto;
+	padding: 5vh;
+}
+
+.catalog-item {
+	display: grid;
+	place-items: center;
+	box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.5);
+	padding: 2vh;
+}
+.catalog-item > img {
+	max-width: 200px;
+}
+
+.wrapper.register{
+	padding: 5vh;
+}
+
+.wrapper.register > h1 {
+	text-align: center;
+}
+
+#mail_avail.avail{
+	color: red;
+}
+
