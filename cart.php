@@ -20,6 +20,15 @@ include "./partials/head.php";
 		
 		<h1>My Cart Page</h1>
 
+		<?php
+			// var_export($_SESSION['cart']);
+
+			foreach ($_SESSION['cart'] as $row => $value) {
+				echo "ID: " .$row. " Quantity: " . $value . "<br>"; 
+			}
+			
+		?>
+
 	</main>  <!-- /.wrapper -->
 
 	<?php include "./partials/footer.php"; ?>

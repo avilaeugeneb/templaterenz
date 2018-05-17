@@ -20,7 +20,13 @@
 
       ?>
       <li class="nav-item">
-        <a class="nav-link" href="./cart.php">My Cart</a>
+        <a class="nav-link" href="./cart.php">Cart (
+        <span class="cartqty">
+          <?php 
+            echo $_SESSION['item_count'];
+          ?>
+        </span> )
+        </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="./catalog.php">Catalog</a>

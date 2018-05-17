@@ -98,5 +98,18 @@ $(document).ready(function(){
 
 	});
 
-
 });
+
+// Add to Cart Function
+function addToCart(itemId){
+	var id = itemId;
+	var quantity = $("#itemQuantity"+id).val();
+	
+	$.ajax({
+		url: "./lib/add_to_cart.php",
+		method: "POST",
+		data:{"item_id":id,"item_quantity":quantity}
+	}).done(function(phpData){
+		$('span.cartqty').html(phpData);
+	});
+}

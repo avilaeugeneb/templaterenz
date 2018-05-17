@@ -36,14 +36,17 @@ $items = mysqli_query($conn,$items_sql);
 				<?php 
 					while($item = mysqli_fetch_assoc($items)){
 
-						echo ' <div class="card catalog-item">
-						<img class="card-img-top" src="' .$item['image_path']. '" alt="Card image cap">
-						<div class="card-body">
-						<h5 class="card-title">' .$item['product_name']. '</h5>
-						<p class="card-text">' .$item['description']. '</p>
-						<a href="item.php?id='.$item['id'].'" class="btn btn-primary">View Details</a>
-						<button type="button" class="btn btn-default">Buy Me</button>
-						</div>
+						echo ' 
+						<div class="card catalog-item">
+							<img class="card-img-top" src="' .$item['image_path']. '" alt="Card image cap">
+							<div class="card-body">
+								<h5 class="card-title">' .$item['product_name']. '</h5>
+								<p class="card-text">' .$item['description']. '</p>
+								<a href="item.php?id='.$item['id'].'" class="btn btn-primary">View Details</a>
+							</div>
+							<input id="itemQuantity'.$item['id'].'" type="number" value="0" min="0">
+
+							<button class="btn btn-primary form-control" onclick="addToCart('.$item['id'].')">Add to Cart</button>
 						</div> ';
 					}
 				?>
